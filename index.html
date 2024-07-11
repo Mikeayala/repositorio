@@ -4,6 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobile Only Website</title>
+    <style>
+        body {
+            display: none;
+        }
+        .mobile-content {
+            display: none;
+        }
+        .desktop-message {
+            display: block;
+            text-align: center;
+            margin-top: 20%;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-content">
+        <h1>Bienvenido a la versión móvil de nuestro sitio web</h1>
+    </div>
+    <div class="desktop-message">
+        <p>Este sitio web solo está disponible en dispositivos móviles.</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
+    <script>
+        function isMobileDevice() {
+            var md = new MobileDetect(window.navigator.userAgent);
+            var isMobileScreen = window.innerWidth <= 768;  // Ajusta el ancho según tus necesidades
+
+            return md.mobile() && isMobileScreen;
+        }
+
+        window.onload = function() {
+            if (isMobileDevice()) {
+                document.querySelector('.mobile-content').style.display = 'block';
+                document.querySelector('.desktop-message').style.display = 'none';
+            }
+            document.body.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Only Website</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
     <script>
         window.onload = function() {
