@@ -1,3 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Only Website</title>
+    <style>
+        /* CSS para ocultar el contenido en dispositivos no móviles */
+        @media only screen and (min-width: 768px) {
+            body {
+                display: none;
+            }
+            .desktop-message {
+                display: block;
+            }
+        }
+
+        .desktop-message {
+            display: none;
+            text-align: center;
+            margin-top: 20%;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a la versión móvil de nuestro sitio web</h1>
+    <div class="desktop-message">
+        <p>Este sitio web solo está disponible en dispositivos móviles.</p>
+    </div>
+</body>
+</html>
+
 <h1> Pagina web</h1>
 
 <div style="padding-top:56%;position:relative;">
